@@ -81,7 +81,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">alex.johnson@email.com</p>
+                  <p className="text-muted-foreground">hamza.2simou@email.com</p>
                 </div>
               </div>
 
@@ -91,7 +91,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">0616161578</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Marrakech, Morocco</p>
                 </div>
               </div>
             </div>
@@ -112,7 +112,6 @@ export const Contact = () => {
                 <li>✨ Full-stack Development</li>
                 <li>🎨 UI/UX Design Projects</li>
                 <li>📱 Mobile App Development</li>
-                <li>🚀 Startup Consulting</li>
                 <li>🎯 Technical Leadership</li>
               </ul>
             </div>
@@ -121,7 +120,7 @@ export const Contact = () => {
 
         <div className="text-center mt-16 slide-up">
           <p className="text-muted-foreground">
-            © 2024 Alex Johnson. Crafted with ❤️ and lots of ☕
+            © 2024 Hamza Simou. 
           </p>
         </div>
       </div>

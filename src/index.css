@@ -124,6 +124,23 @@
   50% { border-color: transparent; }
 }
 
+@keyframes shooting-star-move {
+  0% {
+    transform: translateX(100vw) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px) translateY(0);
+    opacity: 0;
+  }
+}
+
 /* Utility classes */
 @layer components {
   .glass-card {
@@ -166,6 +183,15 @@
     animation: typing 3s steps(30) 1s forwards, blink 1s infinite;
     overflow: hidden;
     white-space: nowrap;
+  }
+
+  .shooting-star {
+    animation: shooting-star-move linear infinite;
+    box-shadow: 0 0 6px currentColor;
+  }
+
+  .shooting-star-trail {
+    animation: shooting-star-move linear infinite;
   }
 }
 

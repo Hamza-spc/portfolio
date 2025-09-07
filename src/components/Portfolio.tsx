@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
+import { Experience } from './sections/Experience';
 import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
 import { Contact } from './sections/Contact';
 import { Navigation } from './Navigation';
-import { FloatingElements } from './FloatingElements';
+import { ShootingStars } from './ShootingStars';
 
 export const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -35,12 +36,13 @@ export const Portfolio = () => {
 
   return (
     <div className="relative min-h-screen">
-      <FloatingElements />
+      <ShootingStars />
       <Navigation activeSection={activeSection} />
       
       <main>
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />

@@ -7,56 +7,56 @@ import { ExternalLink, Github } from 'lucide-react';
 export const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with advanced filtering, real-time inventory, and payment integration.",
+      title: "Lost & Found Management System",
+      description: "A comprehensive full-stack web application for managing lost and found items with advanced features including Google OAuth authentication, AI-powered image similarity search, Stripe payment processing, automated email notifications, and bilingual support. Built for Sofitel Hotel with MERN stack.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-      tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "#",
+      tags: ["React", "Node.js", "Express", "MongoDB", "AI", "Stripe", "OAuth", "TensorFlow.js"],
+      github: "https://github.com/Hamza-spc/Lost_management",
       live: "#",
       featured: true,
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Interactive dashboard with machine learning insights and real-time data visualization.",
+      title: "TourInsight - Venue Rating System",
+      description: "A Django-based web application for discovering, rating, and reviewing venues like hotels, restaurants, cafes, and more. TourInsight helps travelers make informed decisions with real reviews and ratings.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
-      tags: ["Python", "React", "TensorFlow", "D3.js"],
-      github: "#",
+      tags: ["Python", "Django", "HTML", "CSS", "MySQL", "Rating System"],
+      github: "https://github.com/Hamza-spc/RateWebsite",
       live: "#",
       featured: true,
     },
     {
-      title: "Social Media App",
-      description: "Real-time social platform with instant messaging, post sharing, and user engagement features.",
+      title: "SportsApp - Event Discovery Platform",
+      description: "A modern web platform for discovering events, venues, and social feeds. Built with Next.js, TypeScript, and Tailwind CSS for a seamless user experience.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-      tags: ["React Native", "Firebase", "Node.js"],
-      github: "#",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Events", "Social"],
+      github: "https://github.com/Hamza-spc/sportsApp",
       live: "#",
-      featured: false,
+      featured: true,
     },
     {
-      title: "Task Management Tool",
-      description: "Collaborative project management platform with team features and progress tracking.",
+      title: "Blog Website",
+      description: "A full-featured blog platform built with PHP Laravel, featuring modern design with Tailwind CSS and MySQL database integration.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-      tags: ["Next.js", "MongoDB", "Socket.io"],
-      github: "#",
+      tags: ["PHP", "Laravel", "HTML", "Tailwind CSS", "MySQL", "Blog"],
+      github: "https://github.com/Hamza-spc/myblogproject",
       live: "#",
       featured: false,
     },
     {
-      title: "Fitness Tracking App",
-      description: "Mobile fitness app with workout plans, nutrition tracking, and progress analytics.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-      tags: ["React Native", "Redux", "Chart.js"],
-      github: "#",
+      title: "Hangman Game",
+      description: "A classic word guessing game implemented in C programming language. Features interactive gameplay, word selection, and score tracking with a clean command-line interface.",
+      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=250&fit=crop",
+      tags: ["C", "Game Development", "Command Line", "Data Structures", "Algorithms"],
+      github: "https://github.com/Hamza-spc",
       live: "#",
       featured: false,
     },
     {
-      title: "Cryptocurrency Tracker",
-      description: "Real-time crypto portfolio tracker with advanced charting and market analysis.",
-      image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=250&fit=crop",
-      tags: ["Vue.js", "Express", "WebSocket"],
-      github: "#",
+      title: "Receipt Management System",
+      description: "An intelligent receipt analysis system using Python, AI, and Tesseract OCR to automatically extract and analyze receipt data. Features automated text recognition, data processing, and expense categorization.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop",
+      tags: ["Python", "AI", "Tesseract OCR", "Computer Vision", "Data Processing", "Machine Learning"],
+      github: "https://github.com/Hamza-spc",
       live: "#",
       featured: false,
     },
@@ -73,7 +73,7 @@ export const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A showcase of my recent work, featuring full-stack applications and creative solutions.
+            A showcase of my recent work, featuring full-stack applications, AI-powered tools, and modern web solutions built with various technologies.
           </p>
         </div>
 
@@ -115,21 +115,24 @@ export const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="glass-card border-primary/50 hover:border-primary transform hover:scale-105 transition-all duration-300"
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md glass-card border-primary/50 hover:border-primary transform hover:scale-105 transition-all duration-300 border"
                   >
                     <Github className="mr-2 h-4 w-4" />
                     Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 transform hover:scale-105 transition-all duration-300"
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md bg-primary hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 text-primary-foreground"
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
-                  </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -175,14 +178,24 @@ export const Projects = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1 text-xs">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center flex-1 px-3 py-2 text-xs font-medium rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+                    >
                       <Github className="mr-1 h-3 w-3" />
                       Code
-                    </Button>
-                    <Button size="sm" className="flex-1 text-xs">
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center flex-1 px-3 py-2 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
+                    >
                       <ExternalLink className="mr-1 h-3 w-3" />
                       Demo
-                    </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
