@@ -17,9 +17,9 @@ export const EMAILJS_CONFIG = {
 
 // EmailJS template variables that should match your EmailJS template
 export const EMAILJS_TEMPLATE_PARAMS = {
-  from_name: '{{from_name}}',
-  from_email: '{{from_email}}',
-  subject: '{{subject}}',
-  message: '{{message}}',
-  to_email: '{{to_email}}'
+  name: '{{name}}',           // Sender's name
+  email: '{{email}}',         // Sender's email (for reply-to)
+  title: '{{title}}',         // Email subject
+  message: '{{message}}',     // Message content
+  time: '{{time}}'            // Timestamp
 };

@@ -32,11 +32,11 @@ export const Contact = () => {
 
     try {
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
+        name: formData.name,
+        email: formData.email,
+        title: formData.subject,
         message: formData.message,
-        to_email: EMAILJS_CONFIG.TO_EMAIL
+        time: new Date().toLocaleString()
       };
 
       await emailjs.send(

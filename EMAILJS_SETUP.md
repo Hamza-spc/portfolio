@@ -26,6 +26,7 @@ This guide will help you set up EmailJS to receive contact form submissions at `
 If you get "Request had insufficient authentication scopes" error:
 
 1. **Revoke Current Permissions**:
+
    - Go to [Google Account Settings](https://myaccount.google.com/permissions)
    - Find EmailJS in "Third-party apps with account access"
    - Click "Remove access"
@@ -83,6 +84,7 @@ This message was sent from your portfolio contact form.
 If Gmail continues to give scope errors, try using Outlook:
 
 1. **Create Outlook Service**:
+
    - In EmailJS, choose **Outlook** instead of Gmail
    - Use your Gmail address: `hamza.2simou@gmail.com`
    - Outlook often has fewer permission issues
