@@ -12,7 +12,7 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your actual public key
   
   // Your email address where messages will be sent
-  TO_EMAIL: 'hamza.2simou@email.com'
+  TO_EMAIL: 'hamza.2simou@gmail.com'
 };
 
 // EmailJS template variables that should match your EmailJS template

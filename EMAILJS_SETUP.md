@@ -12,10 +12,30 @@ This guide will help you set up EmailJS to receive contact form submissions at `
 
 1. In the EmailJS dashboard, go to **Email Services**
 2. Click **Add New Service**
-3. Choose your email provider (Gmail, Outlook, etc.)
-4. Follow the setup instructions for your provider
+3. Choose **Gmail** as your email provider
+4. **IMPORTANT**: When setting up Gmail, make sure to:
+   - Use your Gmail account: `hamza.2simou@gmail.com`
+   - Grant **ALL** required permissions when prompted
+   - Specifically allow "Send email on your behalf" permission
+   - If you see scope errors, revoke permissions and re-authorize
 5. Name your service: `service_portfolio`
 6. Note down the **Service ID**
+
+### Troubleshooting Gmail API Scope Error:
+
+If you get "Request had insufficient authentication scopes" error:
+
+1. **Revoke Current Permissions**:
+   - Go to [Google Account Settings](https://myaccount.google.com/permissions)
+   - Find EmailJS in "Third-party apps with account access"
+   - Click "Remove access"
+
+2. **Re-authorize with Full Permissions**:
+   - Go back to EmailJS dashboard
+   - Delete the current Gmail service
+   - Create a new Gmail service
+   - When prompted, make sure to check ALL permission boxes
+   - Grant "Send email on your behalf" permission
 
 ## Step 3: Create Email Template
 
@@ -58,12 +78,31 @@ This message was sent from your portfolio contact form.
 3. Fill out and submit the form
 4. Check your email at `hamza.2simou@email.com`
 
+## Alternative: Use Outlook/Hotmail Instead
+
+If Gmail continues to give scope errors, try using Outlook:
+
+1. **Create Outlook Service**:
+   - In EmailJS, choose **Outlook** instead of Gmail
+   - Use your Gmail address: `hamza.2simou@gmail.com`
+   - Outlook often has fewer permission issues
+
+2. **Or Use Custom SMTP**:
+   - Choose **Other** email service
+   - Use Gmail SMTP settings:
+     - SMTP Server: `smtp.gmail.com`
+     - Port: `587`
+     - Username: `hamza.2simou@gmail.com`
+     - Password: Use an App Password (not your regular password)
+
 ## Troubleshooting
 
 - Make sure your email service is properly configured
 - Check that the template variables match exactly
 - Verify your public key is correct
 - Check the browser console for any error messages
+- For Gmail: Use App Password instead of regular password
+- For scope errors: Revoke and re-authorize with full permissions
 
 ## Free Tier Limits
 
