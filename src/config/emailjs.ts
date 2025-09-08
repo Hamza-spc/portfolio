@@ -3,13 +3,13 @@
 
 export const EMAILJS_CONFIG = {
   // Your EmailJS service ID (create a service in EmailJS dashboard)
-  SERVICE_ID: 'service_portfolio',
+  SERVICE_ID: 'service_nw5s7ff',
   
   // Your EmailJS template ID (create a template in EmailJS dashboard)
-  TEMPLATE_ID: 'template_contact',
+  TEMPLATE_ID: 'template_9o5htev',
   
   // Your EmailJS public key (found in EmailJS account settings)
-  PUBLIC_KEY: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your actual public key
+  PUBLIC_KEY: 'DHisTn6EdWifWnkeC',
   
   // Your email address where messages will be sent
   TO_EMAIL: 'hamza.2simou@gmail.com'
