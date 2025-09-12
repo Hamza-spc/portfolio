@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    /* Dark theme base colors */
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
+    /* Fresh & Clean - Light Theme (Startup Style) */
+    --background: 210 20% 98%; /* Off-white #F9FAFB */
+    --foreground: 222 84% 5%;
 
-    --card: 222 35% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 222 84% 5%;
 
-    --popover: 222 47% 5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
 
-    /* Vibrant gradient primaries */
-    --primary: 250 100% 65%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 280 100% 70%;
+    /* Bright blue primary with lime green accent */
+    --primary: 213 94% 68%; /* Bright Blue #2563EB */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 84 81% 44%; /* Lime Green glow */
 
-    --secondary: 222 35% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 222 84% 5%;
 
-    --muted: 222 35% 15%;
-    --muted-foreground: 215.4 16.3% 65%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 215.4 16.3% 35%;
 
-    --accent: 310 100% 65%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 84 81% 44%; /* Lime Green #A3E635 */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 35% 18%;
-    --input: 222 35% 15%;
-    --ring: 250 100% 65%;
+    --border: 210 20% 85%;
+    --input: 210 20% 90%;
+    --ring: 84 81% 44%; /* Lime Green ring */
 
     /* Glass morphism */
-    --glass: 222 35% 8% / 0.7;
-    --glass-border: 210 40% 98% / 0.1;
+    --glass: 0 0% 100% / 0.7;
+    --glass-border: 84 81% 44% / 0.2;
 
-    /* Gradients */
+    /* Gradients - Blue to Lime Green */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--primary)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(222 35% 8%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--accent)), hsl(84 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(210 20% 95%));
     --gradient-text: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
 
-    /* Shadows and glows */
-    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
-    --shadow-accent: 0 0 30px hsl(var(--accent) / 0.2);
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Shadows and glows - Lime Green accents */
+    --shadow-glow: 0 0 50px hsl(var(--accent) / 0.2);
+    --shadow-accent: 0 0 30px hsl(var(--accent) / 0.3);
+    --shadow-glass: 0 8px 32px 0 rgba(163, 230, 53, 0.15);
 
     /* Animation speeds */
     --transition-fast: 0.15s ease-out;
@@ -61,20 +61,70 @@
     --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Fresh & Clean - Dark Theme */
+    --background: 222 84% 5%; /* Very dark navy #0F172A */
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 8%; /* Dark navy #0A192F */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Bright blue primary with lime green accent (same colors, different contrast) */
+    --primary: 213 94% 68%; /* Bright Blue #2563EB */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 84 81% 44%; /* Lime Green glow */
+
+    --secondary: 222 84% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 84% 15%;
+    --muted-foreground: 215.4 16.3% 65%;
+
+    --accent: 84 81% 44%; /* Lime Green #A3E635 */
+    --accent-foreground: 222 84% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 84% 18%;
+    --input: 222 84% 15%;
+    --ring: 84 81% 44%; /* Lime Green ring */
+
+    /* Glass morphism - dark version */
+    --glass: 222 84% 8% / 0.7;
+    --glass-border: 84 81% 44% / 0.2;
+
+    /* Gradients - Blue to Lime Green (same, but work on dark background) */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--accent)), hsl(84 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(222 84% 8%));
+    --gradient-text: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+
+    /* Shadows and glows - Lime Green accents (more prominent on dark) */
+    --shadow-glow: 0 0 50px hsl(var(--accent) / 0.3);
+    --shadow-accent: 0 0 30px hsl(var(--accent) / 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(10, 25, 47, 0.37);
+
+    --sidebar-background: 222 84% 5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 84% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 84% 18%;
+    --sidebar-ring: 84 81% 44%;
   }
 
 }
@@ -204,10 +254,16 @@
     @apply bg-background text-foreground;
     background: var(--gradient-subtle);
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Smooth theme transitions */
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
 
   /* Scrollbar styling */
