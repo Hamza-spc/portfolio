@@ -19,17 +19,47 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="slide-in-left">
             <h3 className="text-2xl font-bold mb-6 gradient-text">My Journey</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              As a Software Engineering graduate, I've always been fascinated by the 
-              intersection of artificial intelligence and practical software development. 
-              Over my 3+ years of professional experience, I've specialized in building 
-              intelligent systems that solve real-world problems.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              When I'm not developing software, you'll find me exploring the latest 
-              machine learning algorithms, contributing to open source projects, or 
-              diving deep into AI research papers to stay at the forefront of technology.
-            </p>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p className="text-lg font-medium text-foreground">
+                It all started when I began noticing small everyday problems and wondering,
+                <span className="italic text-primary">"Could I build something to fix this?"</span>
+              </p>
+              
+              <div className="space-y-4">
+                <p>
+                  <span className="font-semibold text-foreground">Finding friends to play football</span> led me to create 
+                  <span className="font-medium text-primary"> AtlasApp</span>, a sports platform that connects players and organizes matches.
+                </p>
+                
+                <p>
+                  <span className="font-semibold text-foreground">Searching for good places to eat or hang out</span> inspired 
+                  <span className="font-medium text-primary"> TourInsight</span>, a web app that lets people share honest reviews.
+                </p>
+                
+                <p>
+                  <span className="font-semibold text-foreground">Watching hotels struggle to track lost items</span> sparked a digital 
+                  <span className="font-medium text-primary"> Lost & Found system</span> to simplify the process.
+                </p>
+                
+                <p>
+                  <span className="font-semibold text-foreground">Even keeping track of my own expenses</span> turned into a project that uses 
+                  <span className="font-medium text-primary"> AI to scan receipts</span> and calculate spending.
+                </p>
+              </div>
+              
+              <div className="bg-muted/30 p-6 rounded-lg border-l-4 border-primary">
+                <p className="font-medium text-foreground mb-3">
+                  I'm Hamza Simou, a Computer Science student and full-stack developer who loves turning real-life frustrations into digital solutions.
+                </p>
+                <p className="mb-3">
+                  I enjoy working across the stack—from smooth, user-friendly interfaces to solid back-end logic—and I'm always exploring new technologies to sharpen my skills.
+                </p>
+                <p className="text-primary font-medium">
+                  I'm currently open to opportunities where I can keep solving meaningful problems and grow as a software engineer.
+                </p>
+              </div>
+            </div>
+           
           </div>
           
           <div className="slide-in-right">

@@ -4,16 +4,19 @@ import { About } from './sections/About';
 import { Experience } from './sections/Experience';
 import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
+import Certifications from './sections/Certifications';
 import { Contact } from './sections/Contact';
 import { Navigation } from './Navigation';
 import { ShootingStars } from './ShootingStars';
+import { LoadingScreen } from './LoadingScreen';
 
 export const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'certifications', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -34,6 +37,14 @@ export const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
+
   return (
     <div className="relative min-h-screen">
       <ShootingStars />
@@ -45,6 +56,7 @@ export const Portfolio = () => {
         <Experience />
         <Skills />
         <Projects />
+        <Certifications />
         <Contact />
       </main>
     </div>
